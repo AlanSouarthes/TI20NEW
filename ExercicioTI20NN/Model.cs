@@ -369,6 +369,192 @@ namespace ExerciciosTI20N
         public double ExercicioVinteSeis(double peso, double altura)
         {
             return peso / (altura * altura);
-        } 
+        }
+
+        //Exercício 27: Faça um algoritmo que leia a idade de uma pessoa expressa em anos,
+        //meses e dias e escreva a idade dessa pessoa expressa apenas em dias.
+        //Considerar ano com 365 dias e mês com 30 dias.
+        public int ExercicioVinteSete(int dia, int mes, int ano)
+        {
+            int idade = 0;
+
+            idade = (ano * 365) + (mes * 12) + dia;
+
+            return idade;
+        }
+
+
+        //Exercício 28:  Ler o salário fixo e o valor das vendas efetuadas pelo
+        //vendedor de uma empresa.Sabendo-se que ele recebe uma
+        //comissão de 3% sobre o total das vendas até R$ 1.500,00
+        //mais 5% sobre o que ultrapassar este valor, calcular e
+        //escrever o seu salário total
+        public double ExercicioVinteOito(double salarioFixo, double vendas)
+        {
+            double vendasComissao = 0;
+
+            if(vendas <= 1500)
+            {
+                vendasComissao = vendas * 0.03;
+            }
+            else if(vendas > 1500) 
+            {
+                vendasComissao = vendas * 0.05;
+            }
+
+            return salarioFixo + vendasComissao;
+        }
+
+        //Exercício 29: Ler 10 valores e escrever quantos desses valores lidos são NEGATIVOS.
+        public int ExercicioVinteNove()
+        {
+            int num = 0;
+            int cont = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Informe um número: ");
+                num = Convert.ToInt32(Console.ReadLine());
+
+                if(num < 0)
+                {
+                    cont++;
+                }
+            }
+            return cont;
+        }
+
+
+        //Exercício 30: Escreva um algoritmo para ler 10 números. Todos os
+        //números lidos com valor inferior a 40 devem ser somados.
+        //Escreva o valor final da soma efetuada
+
+        public int ExercicioTrinta()
+        {
+            int num = 0;
+            int soma = 0;
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Informe um numero: ");
+                num = Convert.ToInt32(Console.ReadLine());
+
+                if(num < 40)
+                {
+                    soma += num;
+                }
+            }
+            return soma;
+        }
+
+        //Exercício 31: Escreva um algoritmo que permita a leitura das notas de
+        //uma turma de 20 alunos.Calcular a média da turma.Escrever a média da turma.
+
+        public double ExercicioTrintaUm()
+        {
+            double media = 0;
+            double nota = 0;
+            double soma = 0;
+            for(int i = 0; i <= 20; i++)
+            {
+                Console.WriteLine("Informe um numero: ");
+                nota = Convert.ToInt32(Console.ReadLine());
+
+                soma += nota;
+
+                media = soma / 20;
+
+            }
+            return media;
+        }
+
+        //Exercício 32: Faça um algoritmo que calcule a quantidade de litros de
+        //combustível gasta em uma viagem, utilizando um automóvel
+        //que faz 12Km por litro.Para obter o cálculo, o usuário deve
+        //fornecer o tempo gasto na viagem e a velocidade média
+        //durante ela.Desta forma, será possível obter a distância
+        //percorrida com a fórmula DISTANCIA = TEMPO * VELOCIDADE.
+        //Tendo o valor da distância, basta calcular a quantidade de
+        //litros de combustível utilizada na viagem com a fórmula:
+        //LITROS_USADOS = DISTANCIA / 12.O programa deve
+        //apresentar os valores da velocidade média, tempo gasto na
+        //viagem, a distância percorrida e a quantidade de litros
+        //utilizada na viagem
+
+        public string ExercicioTrintaDois(double tempo, double velociMedia)
+        {
+            double distancia = 0;
+            double litrosUsados = 0;
+
+            distancia = tempo * velociMedia;
+            
+            litrosUsados = distancia / 12;
+
+            return "A velocidade média é de: " + velociMedia + "\n O tempo gasto na viagem é de: " + tempo + "\n A distância percorrida é de: " + distancia + "\n A quantidade de litros utilizada é de: " + litrosUsados;
+        }
+
+        //Exercício 33: Escreva um algoritmo para ler as dimensões de um retângulo (base e
+        //altura), calcular e escrever a área do retângulo
+
+        public string ExercicioTrintaTres(double bases, double altura)
+        {
+            double area = 0;
+
+            area = bases * altura / 2;
+
+            return "A area do tringulo é de: " + area;
+        }
+
+        //Exercício 34: Escreva um algoritmo para ler o número total de eleitores de um
+        //município, o número de votos brancos, nulos e válidos.Calcular e
+        //escrever o percentual que cada um representa em relação ao total de eleitores 
+        //total/voto * 100
+        public string ExercicioTrintaQuatro(double totalEleitores, double votosBrancos, double votosValidos, double votosNulos)
+        {
+            return "O total de eleitores é de: " + totalEleitores + "\nA porcentagem de votos branco é de: " + (votosBrancos / totalEleitores) * 100 + "%" + "\nA porcentagem de votos nulos é de: " + (votosNulos / totalEleitores) * 100 + "%" + "\nA porcentagem de votos validos é de: " + (votosValidos / totalEleitores) * 100 + "%";
+        }
+
+
+        //Exercício 35: O custo de um carro novo ao consumidor é a soma do custo de fábrica
+        //com a porcentagem do distribuidor e dos impostos(aplicados ao custo
+        //de fábrica). Supondo que o percentual do distribuidor seja de 28% e os
+        //impostos de 45%, escrever um algoritmo para ler o custo de fábrica de
+        //um carro, calcular e escrever o custo final ao consumidor.
+        public string ExercicioTrintaCinco(double custoFabrica)
+        {
+            double valorDistribuidor = 0;
+            double valorImposto = 0;
+            double valorFinal = 0;
+
+            valorDistribuidor = custoFabrica * 0.28;
+            valorImposto = custoFabrica * 0.45;
+            valorFinal = custoFabrica + valorDistribuidor + valorImposto;
+
+            return "O valor final do carro é de: " + valorFinal;
+        }
+
+        //Exercício 36: Uma revendedora de carros usados paga a seus funcionários
+        //vendedores um salário fixo por mês, mais uma comissão também fixa
+        //para cada carro vendido e mais 5% do valor das vendas por ele
+        //efetuadas.Escrever um algoritmo que leia o número de carros por ele
+        //vendidos, o valor total de suas vendas, o salário fixo e o valor que ele
+        //recebe por carro vendido. Calcule e escreva o salário final do vendedor.
+
+
+        //Exercício 37:  Faça um programa que imprima os números de 1 a 100,
+        //mas substitua os múltiplos de 3 por "Fizz" e os múltiplos de 5 por "Buzz".
+        //Para números que são múltiplos de ambos (3 e 5), imprima "FizzBuzz".
+
+
+
+        //Exercício 38: Faça um programa que imprima os números de 100 a 1, em ordem decrescente.
+
+
+
+        //Exercício 39: Faça um programa que peça ao usuário uma palavra e imprima
+        //cada letra dela em uma linha.
+
+
+
+        //Exercício 40:  Faça um programa que peça ao usuário um número e imprima
+        //a soma dos números pares até esse número.
     }//fim da classe
 }//fim do projeto
