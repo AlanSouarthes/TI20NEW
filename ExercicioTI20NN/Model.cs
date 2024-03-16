@@ -537,12 +537,46 @@ namespace ExerciciosTI20N
         //efetuadas.Escrever um algoritmo que leia o número de carros por ele
         //vendidos, o valor total de suas vendas, o salário fixo e o valor que ele
         //recebe por carro vendido. Calcule e escreva o salário final do vendedor.
+        public string ExercicioTrintaSeis(double salarioFixo, double comissaoFixa, double carrosVendidos, double valorVendas)
+        {
+
+            double salarioFinal = 0;
+            double comissaoVendas = 0;
+
+            comissaoVendas = valorVendas * 0.05;
+            salarioFinal = salarioFixo + comissaoFixa + comissaoVendas; 
+
+            return "O salário fixo é de : R$ " + salarioFixo + "\nO número de carros venddios foi de: " + carrosVendidos + "\nO valor total de vendas foi de: " + valorVendas + "\nO salário final é de :R$ " + salarioFinal;
+        }
 
 
         //Exercício 37:  Faça um programa que imprima os números de 1 a 100,
         //mas substitua os múltiplos de 3 por "Fizz" e os múltiplos de 5 por "Buzz".
         //Para números que são múltiplos de ambos (3 e 5), imprima "FizzBuzz".
-
+        public string ExercicioTrintaSete()
+        {
+            string multiplo = "";
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    multiplo += "\n" + "Fizz";
+                }
+                else if(i % 5 == 0)
+                {
+                    multiplo += "\n" + "Buzz";
+                }
+                else if( i % 3 == 0 && i % 5 == 0)
+                {
+                    multiplo += "\n" + " FizzBuzz";
+                }
+                else
+                {
+                    multiplo += "\n" + i;
+                }
+            }
+            return multiplo;
+        }
 
 
         //Exercício 38: Faça um programa que imprima os números de 100 a 1, em ordem decrescente.
@@ -556,5 +590,45 @@ namespace ExerciciosTI20N
 
         //Exercício 40:  Faça um programa que peça ao usuário um número e imprima
         //a soma dos números pares até esse número.
+
+        //Exercício 41: Faça um algoritmo que leia os valores de A, B, C e em
+        //seguida imprima na tela a soma entre A e B é mostre se a soma é menor que C.
+
+        //Exercício 42: Faça um algoritmo que leia dois valores inteiros A e B,
+        //se os valores de A e B forem iguais, deverá somar os dois valores,
+        //senão deverá multiplicar. Ao final de qualquer um dos cálculos deve-se
+        //atribuir o resultado a uma variável C e imprimir na tela.
+
+        //Exercício 43: Faça um algoritmo que receba um número inteiro e imprima na
+        //tela o seu antecessor e o seu sucessor.
+
+        //Exercício 44: Faça um algoritmo que leia o valor do salário mínimo e o
+        //valor do salário de um usuário, calcule quantos salários mínimos esse 
+        //usuário ganha e imprima na tela o resultado.
+
+        //Exercício 45:  Faça um algoritmo que leia três valores inteiros diferentes e
+        //imprima na tela os valores em ordem decrescente.
+
+        //Exercício 46:Faça um algoritmo que leia quatro notas obtidas por um aluno,
+        //calcule a média das nota obtidas, imprima na tela o nome do aluno e 
+        //se o aluno foi aprovado ou reprovado.
+        //Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.
+
+        //Exercício 47: Faça um algoritmo que receba um valor A e B, e troque o valor de A por B e o
+        //valor de B por A e imprima na tela os valores.
+
+        //Exercício 48: Faça um algoritmo que leia o ano em que uma pessoa nasceu,
+        //imprima na tela quantos anos, meses e dias essa pessoa ja viveu. Leve em 
+        //consideração o ano com 365 dias e o mês com 30 dias. (Ex: 5 anos, 2 meses e 15 dias de vida)
+
+        //Exercício 49: Faça um algoritmo que leia três valores que representam os três lados
+        //de um triângulo e verifique se são válidos, determine se o triângulo é 
+        //equilátero, isósceles ou escaleno.
+
+        //Exercício 50: Faça um algoritmo que calcule a quantidade de litros de combustível
+        //gastos em uma viagem, sabendo que o carro faz 12km com um litro.
+        //Deve-se fornecer ao usuário o tempo que será gasto na viagem a sua velocidade média,
+        //distância percorrida e a quantidade de litros utilizados para fazer a viagem.
+        // Fórmula: distância = tempo x velocidade.  litros usados = distância / 12.
     }//fim da classe
 }//fim do projeto

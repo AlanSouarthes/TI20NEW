@@ -302,6 +302,26 @@ namespace ExerciciosTI20N
                         Console.WriteLine(modelo.ExercicioTrintaCinco(custoFabrica));
                         break;
 
+                    case 36:
+                        Console.WriteLine("Informe o salario fixo : ");
+                        salarioFixo = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Informe a comissao fixa: ");
+                        double comissaoFixa = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Informe o numero de carros vendidos: ");
+                        double carrosVendidos = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine("Informe o valor das vendas realizada: ");
+                        double valorVendas = Convert.ToDouble(Console.ReadLine());
+
+                        Console.WriteLine(modelo.ExercicioTrintaSeis(salarioFixo, comissaoFixa, carrosVendidos, valorVendas));
+                        break;
+
+                    case 37:
+                        Console.WriteLine(modelo.ExercicioTrintaSete());
+                        break;
+
                 }//fim do método
             } while (opcao != 0);
         }//fim do operacao
